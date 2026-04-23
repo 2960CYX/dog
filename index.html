@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>DogTI 测试</title>
+  <meta name="description" content="DogTI 狗格测试，6道题找到你的本命狗格类型。">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="app-logo">DogTI</div>
+      <div class="app-subtitle">重生之我变成了一只狗</div>
+    </header>
+
+    <main>
+      <section class="screen screen-active" id="screen-intro">
+        <div class="intro-dogs" aria-hidden="true">
+          <div class="dog-row">
+            <div class="dog dog-1" data-dog-slot="1"></div>
+            <div class="dog dog-2" data-dog-slot="2"></div>
+            <div class="dog dog-3" data-dog-slot="3"></div>
+            <div class="dog dog-4" data-dog-slot="4"></div>
+          </div>
+          <div class="dog-row">
+            <div class="dog dog-5" data-dog-slot="5"></div>
+            <div class="dog dog-6" data-dog-slot="6"></div>
+            <div class="dog dog-7" data-dog-slot="7"></div>
+            <div class="dog dog-8" data-dog-slot="8"></div>
+          </div>
+          <div class="dog-row">
+            <div class="dog dog-9" data-dog-slot="9"></div>
+            <div class="dog dog-10" data-dog-slot="10"></div>
+            <div class="dog dog-11" data-dog-slot="11"></div>
+            <div class="dog dog-12" data-dog-slot="12"></div>
+          </div>
+        </div>
+        <div class="intro-title-main">重生之我变成了一只狗</div>
+        <div class="intro-title-sub">“这一次，我要活出自己的狗生”</div>
+        <button class="primary-btn" id="btn-start">
+          <span class="primary-btn-icon">▶</span>
+          <span>开始测试</span>
+        </button>
+      </section>
+
+      <section class="screen" id="screen-quiz">
+        <div class="quiz-top-bar">
+          <button class="back-btn" id="btn-back-intro">←</button>
+          <div class="quiz-progress" id="quiz-progress-text"></div>
+        </div>
+        <div class="quiz-card">
+          <div class="quiz-tag">社交还是不社交，这是个问题</div>
+          <div class="quiz-question" id="quiz-question-text" aria-live="polite"></div>
+          <div class="quiz-options" id="quiz-options" role="listbox" aria-label="测试选项"></div>
+        </div>
+        <button class="primary-btn quiz-next-btn" id="btn-next" disabled>继续 →</button>
+      </section>
+
+      <section class="screen" id="screen-result">
+        <div class="result-header">
+          <div class="result-meta">
+            <span>DogTI 结果</span>
+            <span id="result-date"></span>
+          </div>
+        </div>
+        <div class="result-card">
+          <div class="result-avatar" id="result-avatar" role="img" aria-label="狗格头像"></div>
+          <div class="result-label">你的狗格是</div>
+          <div class="result-title" id="result-title"></div>
+          <div class="result-subtitle" id="result-subtitle"></div>
+        </div>
+        <div class="result-quote" id="result-quote"></div>
+        <div class="result-tags" id="result-tags"></div>
+        <div class="result-desc" id="result-desc"></div>
+        <div class="result-actions">
+          <button class="primary-btn" id="btn-share">分享给朋友</button>
+          <button class="ghost-btn" id="btn-restart">再测一次</button>
+        </div>
+        <div class="share-hint" id="share-hint" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
